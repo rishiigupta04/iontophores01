@@ -23,6 +23,7 @@ function App() {
       <Features />
       <HowItWorks />
       <FAQ />
+      {/* <Footer /> */}
     </div>
   );
 }

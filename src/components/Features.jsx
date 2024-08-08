@@ -32,8 +32,8 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">
+        <div className="benefit-item">
+          <div className="benefit-icon">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png"
               alt="Precision Dosing Icon"
@@ -41,13 +41,13 @@ const Features = () => {
               height="40"
             />
           </div>
-          <div class="benefit-content">
+          <div className="benefit-content">
             <h3>Precision Dosing</h3>
             <p>
               Our smart patch ensures accurate and consistent medication
               delivery.
             </p>
-            <div class="benefit-details">
+            <div className="benefit-details">
               <h4>Advanced Features:</h4>
               <ul>
                 <li>AI-driven dosage adjustment</li>
@@ -57,8 +57,8 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">
+        <div className="benefit-item">
+          <div className="benefit-icon">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2382/2382533.png"
               alt="Non-Invasive Icon"
@@ -66,13 +66,13 @@ const Features = () => {
               height="40"
             />
           </div>
-          <div class="benefit-content">
+          <div className="benefit-content">
             <h3>Non-Invasive Application</h3>
             <p>
               Painless and easy-to-use, improving patient comfort and
               compliance.
             </p>
-            <div class="benefit-details">
+            <div className="benefit-details">
               <h4>Patient Benefits:</h4>
               <ul>
                 <li>No needles or injections required</li>
@@ -82,8 +82,8 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">
+        <div className="benefit-item">
+          <div className="benefit-icon">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2382/2382461.png"
               alt="Reduced Side Effects Icon"
@@ -91,12 +91,12 @@ const Features = () => {
               height="40"
             />
           </div>
-          <div class="benefit-content">
+          <div className="benefit-content">
             <h3>Reduced Side Effects</h3>
             <p>
               Minimizes systemic exposure, leading to fewer adverse reactions.
             </p>
-            <div class="benefit-details">
+            <div className="benefit-details">
               <h4>Clinical Advantages:</h4>
               <ul>
                 <li>Bypasses hepatic first-pass metabolism</li>
@@ -106,8 +106,8 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">
+        <div className="benefit-item">
+          <div className="benefit-icon">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png"
               alt="Data-Driven Care Icon"
@@ -115,12 +115,12 @@ const Features = () => {
               height="40"
             />
           </div>
-          <div class="benefit-content">
+          <div className="benefit-content">
             <h3>Data-Driven Care</h3>
             <p>
               Leverages advanced analytics for optimized treatment outcomes.
             </p>
-            <div class="benefit-details">
+            <div className="benefit-details">
               <h4>Smart Features:</h4>
               <ul>
                 <li>Continuous data collection and analysis</li>
@@ -130,8 +130,8 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">
+        <div className="benefit-item">
+          <div className="benefit-icon">
             <img
               src="https://cdn-icons-png.flaticon.com/512/1518/1518746.png"
               alt="Patient Empowerment Icon"
@@ -139,10 +139,10 @@ const Features = () => {
               height="40"
             />
           </div>
-          <div class="benefit-content">
+          <div className="benefit-content">
             <h3>Patient Empowerment</h3>
             <p>Gives patients greater control over their RA management.</p>
-            <div class="benefit-details">
+            <div className="benefit-details">
               <h4>Empowering Features:</h4>
               <ul>
                 <li>User-friendly mobile app for tracking progress</li>
