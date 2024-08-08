@@ -39,7 +39,7 @@ li {
   }
 }
 header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255);
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -62,6 +62,7 @@ header {
       object-fit: contain;
       vertical-align: middle;
       overflow: hidden;
+      mix-blend-mode: multiply;
 
       @media (max-width: 768px) {
         height: 60px;
