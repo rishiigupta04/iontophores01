@@ -43,7 +43,10 @@ const AboutUs = () => {
                   height="60"
                 />
                 <h3>Rahul Kumar Gupta</h3>
-                <p>Founder and CEO</p>
+                <p>
+                  Founder and CEO <br />{" "}
+                  <span style={{ opacity: "0" }}>Prof. IIT Bombay</span>
+                </p>
               </div>
               <div className="testimonial">
                 <img
@@ -53,7 +56,10 @@ const AboutUs = () => {
                   height="60"
                 />
                 <h3>Prof. Rohit Srivastava</h3>
-                <p>Mentor, Prof. IIT Bombay</p>
+                <p>
+                  Co-Founder, Mentor <br />
+                  Prof. IIT Bombay
+                </p>
               </div>
             </div>
           </div>
