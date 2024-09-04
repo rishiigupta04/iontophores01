@@ -45,7 +45,7 @@ const AboutUs = () => {
                 <h3>Rahul Kumar Gupta</h3>
                 <p>
                   Founder and CEO <br />{" "}
-                  <span style={{ opacity: "0" }}>Prof. IIT Bombay</span>
+                  <span style={{ opacity: "100" }}>Iontophores®</span>
                 </p>
               </div>
               <div className="testimonial">
@@ -59,6 +59,20 @@ const AboutUs = () => {
                 <p>
                   Co-Founder, Mentor <br />
                   Prof. IIT Bombay
+                </p>
+              </div>
+              <div className="testimonial">
+                <img
+                  style={{ objectPosition: "top" }}
+                  src="/vinay-sir.png"
+                  alt="Prof. Vinay Patel"
+                  width="60"
+                  height="60"
+                />
+                <h3>Vinay Patel</h3>
+                <p>
+                  Assistant Professor <br />
+                  IIT Kharagpur
                 </p>
               </div>
             </div>

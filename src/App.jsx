@@ -9,6 +9,8 @@ import AboutUs from "./components/AboutUs";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
@@ -22,8 +24,9 @@ function App() {
       <AboutUs />
       <Features />
       <HowItWorks />
+      <ContactForm />
       <FAQ />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

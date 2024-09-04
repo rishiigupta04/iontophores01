@@ -1,66 +1,48 @@
-// import React from "react";
-// import {
-//   FaFacebookF,
-//   FaTwitter,
-//   FaLinkedinIn,
-//   FaInstagram,
-// } from "react-icons/fa";
+import React from "react";
+import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 
-// const Footer = () => {
-//   return (
-//     <footer className="footer">
-//       <div className="footer-content">
-//         <div className="footer-section">
-//           <h3>About Us</h3>
-//           <p>
-//             We are a leading provider of innovative solutions for businesses of
-//             all sizes. Our mission is to help our clients succeed through
-//             cutting-edge technology and unparalleled customer service.
-//           </p>
-//         </div>
-//         <div className="footer-section">
-//           <h3>Quick Links</h3>
-//           <ul>
-//             <li>
-//               <a href="#">Home</a>
-//             </li>
-//             <li>
-//               <a href="#">Services</a>
-//             </li>
-//             <li>
-//               <a href="#">Products</a>
-//             </li>
-//             <li>
-//               <a href="#">Contact</a>
-//             </li>
-//           </ul>
-//         </div>
-//         <div className="footer-section">
-//           <h3>Follow Us</h3>
-//           <div className="social-icons">
-//             <a href="#" target="_blank" rel="noopener noreferrer">
-//               <FaFacebookF />
-//             </a>
-//             <a href="#" target="_blank" rel="noopener noreferrer">
-//               <FaTwitter />
-//             </a>
-//             <a href="#" target="_blank" rel="noopener noreferrer">
-//               <FaLinkedinIn />
-//             </a>
-//             <a href="#" target="_blank" rel="noopener noreferrer">
-//               <FaInstagram />
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="footer-bottom">
-//         <p>
-//           &copy; {new Date().getFullYear()} Your Company Name. All rights
-//           reserved.
-//         </p>
-//       </div>
-//     </footer>
-//   );
-// };
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section logo-section">
+          <img width={400} src="./company-logo.jpeg" alt=" company logo" />
+          {/* <div className="social-icons">
+            <Facebook size={20} />
+            <Twitter size={20} />
+            <Linkedin size={20} />
+            <Youtube size={20} />
+          </div> */}
+        </div>
 
-// export default Footer;
+        <div className="footer-section address-section">
+          <p>SINE, Rahul Bajaj BLDG</p>
+          <p>IIT Bombay, Powai</p>
+          <p>Mumbai 400076</p>
+        </div>
+
+        <div className="footer-section links-section">
+          <ul className="footer-links">
+            <li>
+              <a href="#overview">Overview</a>
+            </li>
+            <li>
+              <a href="#features">Features</a>
+            </li>
+            <li>
+              <a href="#about-us">About us</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; Iontophores®. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
