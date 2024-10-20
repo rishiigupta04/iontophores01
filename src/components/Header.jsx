@@ -20,8 +20,20 @@ const Header = () => {
             <a href="#how-it-works">How It Works</a>
             <a href="#about-us">About us</a>
             <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
           </div>
+          <a
+            id="contact-btn"
+            style={{
+              paddingBlock: "8px",
+              paddingInline: "20px",
+              borderRadius: "5px",
+              backgroundColor: "var(--primary-color)",
+              color: "white",
+            }}
+            href="#contact"
+          >
+            Contact Us
+          </a>
           <button className="hamburger-btn" onClick={toggleSidebar}>
             <span className="bar"></span>
             <span className="bar"></span>
