@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Import icons
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const answerRef = useRef(null); // Create a ref for the answer div
 
   return (
     <div className="faq-item">
       <div className="faq-question" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <FaChevronUp size={20} /> : <FaChevronDown size={20} />}
         {question}
       </div>
-      {isOpen && <div className="faq-answer">{answer}</div>}
+      <div
+        className={`faq-answer ${isOpen ? "open" : ""}`}
+        style={{
+          height: isOpen ? `${answerRef.current.scrollHeight}px` : "0", // Set height based on content
+        }}
+        ref={answerRef} // Attach the ref to the answer div
+      >
+        {answer}
+      </div>
     </div>
   );
 };

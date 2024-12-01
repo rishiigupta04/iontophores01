@@ -6,6 +6,15 @@ const AboutUs = () => {
       <div className="container">
         <h2>About Us</h2>
         <div className="about-content">
+          <div className="about-image">
+            <img
+              src="/award.jpg"
+              alt="Iontophores® research team"
+              width="400"
+              height="300"
+              className="about-image-img"
+            />
+          </div>
           <div className="about-text">
             <p>
               Our iontophoretic patch for transdermal methotrexate delivery has
@@ -16,19 +25,12 @@ const AboutUs = () => {
               non-invasive, painless alternative to traditional methods,
               enhancing patient compliance and comfort.
             </p>
+            <br />
             <p>
               By integrating advanced iontophoresis, we provide a precise,
               efficient, and patient-friendly solution for rheumatoid arthritis
               treatment, setting a new benchmark in drug delivery innovation.
             </p>
-          </div>
-          <div className="about-image">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Iontophores® research team"
-              width="400"
-              height="300"
-            />
           </div>
         </div>
         <div id="testimonials" className="testimonials">

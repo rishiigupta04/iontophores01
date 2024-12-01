@@ -570,30 +570,40 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .about-text {
-  flex-basis: 60%;
+  flex-basis: 50%;
   font-size: 20px;
 }
 
 .about-image {
-  flex-basis: 35%;
+  flex-basis: 50%;
 }
 
 .about-image img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 50%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+.about-image-img {
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
 
 @media (max-width: 768px) {
-  .about-image {
-    flex-basis: 100%;
-    margin-bottom: 20px;
+  .about-image-img {
+    scale: 1.1;
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for style */
+    transform: scale(1.1); /* Slightly enlarge the image */
   }
+}
+
+@media (max-width: 768px) {
   .about-text {
     flex-basis: 100%;
   }
@@ -901,31 +911,48 @@ button:hover {
 }
 
 .faq-item {
-  margin-bottom: 10px;
-  padding: 10px 0;
+  margin: 15px 0;
+  border: 1px solid #00857c;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .faq-question {
-  font-weight: bold;
-  cursor: pointer;
-  background-color: var(--light-gray);
+  background-color: #e0f7f7;
+  color: #00857c;
   padding: 15px;
-  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  font-weight: 600;
-  border: #00857c solid 1px;
-  transition: background-color 0.3s ease;
+}
+
+.faq-question svg {
+  margin-right: 10px;
 }
 
 .faq-answer {
-  margin-top: 10px;
-  padding-left: 20px;
-  margin-top: 15px;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #8fe8e8;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.3s ease-out;
+  padding: 0 15px;
   font-size: 18px;
+  background-color: #00857c;
+  color: white;
 }
+
+.faq-answer.open {
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
+
 .footer {
   background-color: #f3f4f6;
   font-family: Arial, sans-serif;
