@@ -39,14 +39,14 @@ const Overview = () => {
         <br />
         Our groundbreaking iontophoretic patch offers a revolutionary solution,
         enhancing drug delivery and improving patient outcomes. By leveraging
-        the power of iontophoresis, we've created a non-invasive, highly
-        effective method for administering RA medication, promising a new era in
-        arthritis care.
+        the power of Drepto Biomedical Devicesis, we've created a non-invasive,
+        highly effective method for administering RA medication, promising a new
+        era in arthritis care.
       </p>
       <div className="image-container">
         <img
           src="/3.jpg"
-          alt="Iontophores® research team"
+          alt="Drepto Biomedical Devices® research team"
           width="500"
           height="400"
         />

@@ -9,7 +9,7 @@ const AboutUs = () => {
           <div className="about-image">
             <img
               src="/award.jpg"
-              alt="Iontophores® research team"
+              alt="Drepto Biomedical Devices® research team"
               width="400"
               height="300"
               className="about-image-img"
@@ -27,9 +27,10 @@ const AboutUs = () => {
             </p>
             <br />
             <p>
-              By integrating advanced iontophoresis, we provide a precise,
-              efficient, and patient-friendly solution for rheumatoid arthritis
-              treatment, setting a new benchmark in drug delivery innovation.
+              By integrating our advanced Drepto Biomedical Device technology,
+              we provide a precise, efficient, and patient-friendly solution for
+              rheumatoid arthritis treatment, setting a new benchmark in drug
+              delivery innovation.
             </p>
           </div>
         </div>
@@ -47,7 +48,9 @@ const AboutUs = () => {
                 <h3>Rahul Kumar Gupta</h3>
                 <p>
                   Founder and CEO <br />{" "}
-                  <span style={{ opacity: "100" }}>Iontophores®</span>
+                  <span style={{ opacity: "100" }}>
+                    Drepto Biomedical Devices®
+                  </span>
                 </p>
               </div>
               <div className="testimonial">

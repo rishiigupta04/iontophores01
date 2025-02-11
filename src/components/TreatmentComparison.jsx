@@ -6,13 +6,13 @@ const TreatmentComparison = () => {
       id="stats-table"
       className="section treatment-comparison container"
     >
-      <h2>Current Treatment vs. Iontophoretic Patch</h2>
+      <h2>Current Treatment vs. Our Solution</h2>
       <table>
         <thead>
           <tr>
             <th>Aspect</th>
             <th>Traditional Treatment (e.g., Methotrexate)</th>
-            <th>Iontophores® Patch</th>
+            <th>Drepto's Iontophoretic Patch</th>
           </tr>
         </thead>
         <tbody>

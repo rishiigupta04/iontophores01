@@ -39,7 +39,7 @@ const RAContent = () => {
         <div className="stat">
           <div className="stat-number">90%</div>
           <div className="stat-label">
-            Improvement in drug efficacy with iontophoresis
+            Improvement in drug efficacy with Drepto Biomedical Devicesis
           </div>
         </div>
       </div>

@@ -98,8 +98,8 @@ const ContactForm = () => {
       <h4
         style={{ textAlign: "center", fontWeight: "normal", fontSize: "20px" }}
       >
-        Have questions about our innovative Iontophoresis devices? Reach out to
-        us and let's start a conversation now!
+        Have questions about our innovative Drepto Biomedical Devicesis devices?
+        Reach out to us and let's start a conversation now!
       </h4>
 
       <div className="contact-grid">

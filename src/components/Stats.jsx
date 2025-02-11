@@ -4,7 +4,7 @@ const Stats = () => {
   return (
     <section className="section stats">
       <div className="container">
-        <h2 style={{ color: "white" }}>RA and Iontophoresis: By the Numbers</h2>
+        <h2 style={{ color: "white" }}>RA and Drepto: By the Numbers</h2>
         <div className="stats-grid">
           <div className="stat-item">
             <h3>17.6M</h3>
@@ -16,7 +16,12 @@ const Stats = () => {
           </div>
           <div className="stat-item">
             <h3>90%</h3>
-            <p>Improvement in drug efficacy with iontophoresis</p>
+            <p>
+              Improvement in drug efficacy with{" "}
+              <span style={{ fontWeight: "bold", fontSize: "18px" }}>
+                Drepto
+              </span>
+            </p>
           </div>
           <div className="stat-item">
             <h3>100%</h3>
