@@ -48,9 +48,7 @@ const AboutUs = () => {
                 <h3>Rahul Kumar Gupta</h3>
                 <p>
                   Founder and CEO <br />{" "}
-                  <span style={{ opacity: "100" }}>
-                    Drepto Biomedical Devices®
-                  </span>
+                  <span style={{ opacity: "100" }}>Ph.D IIT Bombay</span>
                 </p>
               </div>
               <div className="testimonial">
