@@ -69,15 +69,15 @@ const AboutUs = () => {
               <div className="testimonial">
                 <img
                   style={{ objectPosition: "top" }}
-                  src="/vinay-sir.png"
-                  alt="Prof. Vinay Patel"
+                  src="/dr_rupesh.jpg"
+                  alt="Dr. Rupesh Ghyar"
                   width="60"
                   height="60"
                 />
-                <h3>Vinay Patel</h3>
+                <h3>Dr. Rupesh Ghyar</h3>
                 <p>
-                  Assistant Professor <br />
-                  IIT Kharagpur
+                  Technical Advisor <br />
+                  Alumnus, IIT Bombay
                 </p>
               </div>
             </div>
