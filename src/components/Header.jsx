@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="container">
         <div className="nav-wrapper">
           <a href="/">
-            <img src="/drepto-removebg.png" alt="Drepto Biomedical Devices®" />
+            <img src="/newwwicon.png" alt="Drepto Biomedical Devices®" />
           </a>
           <div className="nav-links">
             <a href="#overview">Overview</a>

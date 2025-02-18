@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section logo-section">
-          <img width={300} src="./drepto-removebg.png" alt=" company logo" />
+          <img width={300} src="/newwwicon.png" alt=" company logo" />
           {/* <div className="social-icons">
             <Facebook size={20} />
             <Twitter size={20} />

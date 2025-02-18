@@ -963,7 +963,7 @@ button:hover {
   margin-top: 15vh;
   margin-inline: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   padding: 0 200px;
 }
