@@ -7,7 +7,7 @@ const Overview = () => {
       <h2>Transforming Rheumatoid Arthritis Treatment</h2>
       <div className="mobile-video-container ">
         <ReactPlayer
-          url="https://youtu.be/i859NvfGiuk"
+          url="https://youtu.be/Hus45Wv3HEM"
           width="500px"
           height="250px"
           controls={true}
