@@ -228,7 +228,8 @@ const ContactForm = () => {
               <FaPhone /> <strong>Phone:</strong> 022 25764761
             </p>
             <p style={{ marginTop: "10px" }}>
-              <FaEnvelope /> <strong>Email:</strong> rahulkumargupta@iitb.ac.in
+              <FaEnvelope /> <strong>Email:</strong>{" "}
+              rahulkgupta@dreptobiodevices.com
             </p>
             <p style={{ marginTop: "10px" }}>
               <strong>Working Hours:</strong> Monday - Friday, 9am - 5pm IST

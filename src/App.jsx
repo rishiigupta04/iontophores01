@@ -8,6 +8,7 @@ import Stats from "./components/Stats";
 import AboutUs from "./components/AboutUs";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
+import Gallery from "./components/Gallery";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
@@ -24,6 +25,7 @@ function App() {
       <AboutUs />
       <Features />
       <HowItWorks />
+      {/* <Gallery /> */}
       <ContactForm />
       <FAQ />
       <Footer />

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-color: #00857c;
   --secondary-color: #66b2b2;
@@ -651,6 +655,43 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
+#gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gallery-swiper {
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-gray);
+}
+
+.gallery-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-swiper .swiper-button-next,
+.gallery-swiper .swiper-button-prev {
+  color: var(--primary-color);
+}
+
+.gallery-swiper .swiper-button-next:hover,
+.gallery-swiper .swiper-button-prev:hover {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
 
 @media screen and (max-width: 768px) {
   .benefits-grid {
@@ -658,6 +699,12 @@ h2 {
   }
   .benefits-header {
     display: none !important;
+  }
+  #gallery {
+    max-width: 100%;
+  }
+  .gallery-swiper {
+    aspect-ratio: 9/16;
   }
 }
 .benefit-item {
