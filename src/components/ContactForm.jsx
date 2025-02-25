@@ -203,7 +203,7 @@ const ContactForm = () => {
           <section style={{ marginBottom: "40px" }}>
             <div>
               <a
-                href="https://forms.gle/HZih8ZStNjkRy7SS9"
+                href="https://forms.gle/HZih8ZStNjkRy7SS"
                 target="blank"
                 style={{
                   display: "block",
