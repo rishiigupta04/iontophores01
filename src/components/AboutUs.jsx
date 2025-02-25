@@ -26,10 +26,9 @@ const AboutUs = () => {
             </p>
             <br />
             <p>
-              By integrating our advanced Drepto Biomedical Device technology,
-              we provide a precise, efficient, and patient-friendly solution for
-              rheumatoid arthritis treatment, setting a new benchmark in drug
-              delivery innovation.
+              By integrating our advanced technology, we provide a precise,
+              efficient, and patient-friendly solution for rheumatoid arthritis
+              treatment, setting a new benchmark in drug delivery innovation.
             </p>
           </div>
         </div>
