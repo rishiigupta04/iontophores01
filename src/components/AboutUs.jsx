@@ -1,4 +1,5 @@
 import React from "react";
+import { Linkedin } from "lucide-react";
 
 const AboutUs = () => {
   return (
@@ -45,8 +46,31 @@ const AboutUs = () => {
                 />
                 <h3>Rahul Kumar Gupta</h3>
                 <p>
+                  <a
+                    href="https://www.linkedin.com/in/rahul-kumar-gupta-4b8bb8190/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#00857c",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      transition: "text-decoration 0.2s",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.textDecoration = "underline")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.textDecoration = "none")
+                    }
+                  >
+                    <Linkedin size={20} /> LinkedIn
+                  </a>
+                </p>
+                <p>
                   Founder and CEO <br />{" "}
-                  <span style={{ opacity: "100" }}>Ph.D IIT Bombay</span>
+                  <span style={{ opacity: "100" }}>IIT Bombay</span>
                 </p>
               </div>
               <div className="testimonial">
@@ -57,6 +81,28 @@ const AboutUs = () => {
                   height="60"
                 />
                 <h3>Prof. Rohit Srivastava</h3>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/rohit-srivastava-02bb2b16/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#00857c",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.textDecoration = "underline")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.textDecoration = "none")
+                    }
+                  >
+                    <Linkedin size={20} /> LinkedIn
+                  </a>
+                </p>
                 <p>
                   Co-Founder, Mentor
                   <br />
@@ -72,6 +118,28 @@ const AboutUs = () => {
                   height="60"
                 />
                 <h3>Dr. Rupesh Ghyar</h3>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/rupesh-ghyar-7510442b7/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#00857c",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.textDecoration = "underline")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.textDecoration = "none")
+                    }
+                  >
+                    <Linkedin size={20} /> LinkedIn
+                  </a>
+                </p>
                 <p>
                   Technical Advisor <br />
                   Alumnus, IIT Bombay
