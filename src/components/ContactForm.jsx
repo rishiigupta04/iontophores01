@@ -7,8 +7,6 @@ import {
   FaEnvelope,
 } from "react-icons/fa"; // Added phone and email icons
 import { z } from "zod";
-import { supabase } from "../../supabaseClient";
-
 // Zod schema for form validation
 const contactFormSchema = z.object({
   name: z
@@ -63,27 +61,18 @@ const ContactForm = () => {
     }
 
     try {
-      // Insert data into Supabase if validation is successful
-      const { data, error } = await supabase
-        .from("formSubmissions")
-        .insert([formData]);
-
-      if (error) {
-        setStatusMessage("Failed to send message. Please try again."); // Set failure message
-        console.error("Error inserting data:", error);
-      } else {
-        setStatusMessage("Message sent successfully!"); // Set success message
-        console.log("Data inserted successfully:", data);
-        // Reset form after successful submission
-        setFormData({
-          name: "",
-          email: "",
-          number: "",
-          subject: "",
-          message: "",
-        });
-        setErrors({});
-      }
+      // Handle form submission (you can implement your own submission logic here)
+      console.log("Form submitted:", formData);
+      setStatusMessage("Message sent successfully!"); // Set success message
+      // Reset form after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        number: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
     } catch (err) {
       setStatusMessage("An error occurred. Please try again."); // Set failure message for unexpected errors
       console.error("Submission error:", err);

@@ -104,7 +104,7 @@ const AboutUs = () => {
                   </a>
                 </p>
                 <p>
-                  Co-Founder, Mentor
+                  Scientific Advisor, Mentor
                   <br />
                   Prof. IIT Bombay
                 </p>
