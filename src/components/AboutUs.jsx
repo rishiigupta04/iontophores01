@@ -5,44 +5,54 @@ const AboutUs = () => {
   return (
     <section id="about-us" className="section about-us">
       <div className="container">
-        <h2>About Us</h2>
+        <h2 className="section-heading">About Company and CEO</h2>
         <div className="about-content">
           <div className="about-image">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              width="400"
-              height="300"
-              className="about-image-img"
+              src="award.jpg"
+              alt="Company Achievement"
+              className="achievement-image"
             />
           </div>
+
           <div className="about-text">
-            <p>
-              Our iontophoretic patch for transdermal methotrexate delivery has
-              undergone rigorous development, leveraging cutting-edge
-              technology, and extensive research. The innovative design ensures
-              controlled and consistent drug release, significantly reducing the
-              required dosage and minimizing side effects. Our patch offers a
-              non-invasive, painless alternative to traditional methods,
-              enhancing patient compliance and comfort.
-            </p>
-            <br />
-            <p>
-              By integrating our advanced technology, we provide a precise,
-              efficient, and patient-friendly solution for rheumatoid arthritis
-              treatment, setting a new benchmark in drug delivery innovation.
-            </p>
+            <div className="award-image-container">
+              <img
+                width={400}
+                src="awardd2.jpg"
+                alt="Company Recognition"
+                className="award-image"
+              />
+            </div>
+            <div>
+              <p>
+                <span style={{ fontWeight: "bold", textAlign: "left" }}>
+                  Drepto's
+                </span>{" "}
+                patch for transdermal methotrexate delivery has undergone
+                rigorous development, leveraging cutting-edge technology, and
+                extensive research. The innovative design ensures controlled and
+                consistent drug release, significantly reducing the required
+                dosage and minimizing side effects. Our patch offers a
+                non-invasive, painless alternative to traditional methods,
+                enhancing patient compliance and comfort. <br /> <br /> By
+                integrating our advanced technology, we provide a precise,
+                efficient, and patient-friendly solution for rheumatoid
+                arthritis treatment, setting a new benchmark in drug delivery
+                innovation.
+              </p>
+            </div>
           </div>
         </div>
         <div id="testimonials" className="testimonials">
-          <div className="container">
-            <h2>Our Team</h2>
+          <div className="container" id="team-links">
+            <h2 className="section-title">Our Team</h2>
             <div className="testimonial-grid">
               <div className="testimonial">
                 <img
                   src="/rahulsir.jpeg"
                   alt="Rahul Kumar Gupta"
-                  width="60"
-                  height="60"
+                  className="team-member-image"
                 />
                 <h3>Rahul Kumar Gupta</h3>
                 <p>
@@ -50,35 +60,21 @@ const AboutUs = () => {
                     href="https://www.linkedin.com/in/rahul-kumar-gupta-4b8bb8190/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      color: "#00857c",
-                      textDecoration: "none",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "4px",
-                      transition: "text-decoration 0.2s",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.target.style.textDecoration = "underline")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.target.style.textDecoration = "none")
-                    }
+                    className="linkedin-link"
                   >
                     <Linkedin size={20} /> LinkedIn
                   </a>
                 </p>
                 <p>
-                  Founder and CEO <br />{" "}
-                  <span style={{ opacity: "100" }}>IIT Bombay</span>
+                  Founder and CEO <br />
+                  <span>IIT Bombay</span>
                 </p>
               </div>
               <div className="testimonial">
                 <img
                   src="/rohitsir.jpeg"
                   alt="Prof. Rohit Srivastava"
-                  width="60"
-                  height="60"
+                  className="team-member-image"
                 />
                 <h3>Prof. Rohit Srivastava</h3>
                 <p>
@@ -86,19 +82,7 @@ const AboutUs = () => {
                     href="https://www.linkedin.com/in/rohit-srivastava-02bb2b16/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      color: "#00857c",
-                      textDecoration: "none",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "4px",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.target.style.textDecoration = "underline")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.target.style.textDecoration = "none")
-                    }
+                    className="linkedin-link"
                   >
                     <Linkedin size={20} /> LinkedIn
                   </a>
@@ -111,11 +95,9 @@ const AboutUs = () => {
               </div>
               <div className="testimonial">
                 <img
-                  style={{ objectPosition: "top" }}
                   src="/dr_rupesh.jpg"
                   alt="Dr. Rupesh Ghyar"
-                  width="60"
-                  height="60"
+                  className="team-member-image"
                 />
                 <h3>Dr. Rupesh Ghyar</h3>
                 <p>
@@ -123,19 +105,7 @@ const AboutUs = () => {
                     href="https://www.linkedin.com/in/rupesh-ghyar-7510442b7/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      color: "#00857c",
-                      textDecoration: "none",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "4px",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.target.style.textDecoration = "underline")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.target.style.textDecoration = "none")
-                    }
+                    className="linkedin-link"
                   >
                     <Linkedin size={20} /> LinkedIn
                   </a>
@@ -149,8 +119,8 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="mission-vision">
-          <h3>Our Mission</h3>
-          <p>
+          <h3 className="mission-title">Our Mission</h3>
+          <p className="mission-text">
             Our mission is to revolutionize the treatment of rheumatoid
             arthritis by providing an innovative, non-invasive, and
             patient-friendly transdermal methotrexate delivery solution. We aim
@@ -160,8 +130,9 @@ const AboutUs = () => {
             significant share of the evolving RA and iontophoretic markets,
             ultimately enhancing the quality of life for millions worldwide.
           </p>
-          <h3>Our Vision</h3>
-          <p>
+
+          <h3 className="vision-title">Our Vision</h3>
+          <p className="vision-text">
             Our vision is to revolutionize the treatment of rheumatoid
             arthritis, transforming lives with our innovative drug delivery
             systems. We dream of a world where patients experience relief
