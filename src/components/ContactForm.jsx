@@ -1,27 +1,16 @@
 import React, { useState } from "react";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaPhone,
-  FaEnvelope,
-} from "react-icons/fa"; // Added phone and email icons
+import { FaPhone, FaEnvelope } from "react-icons/fa"; // Added phone and email icons
 import { z } from "zod";
 // Zod schema for form validation
 const contactFormSchema = z.object({
-  name: z
-    .string()
-    .min(2, { message: "Name must be at least 2 characters long" }),
+  name: z.string({ message: "Name is not valid" }),
+
   email: z.string().email({ message: "Invalid email address" }),
-  number: z
-    .string()
-    .regex(/^\d{10}$/, { message: "Contact number must be 10 digits" }),
-  subject: z
-    .string()
-    .min(3, { message: "Subject must be at least 3 characters long" }),
+  number: z.string().regex(/^\d{10}$/, { message: "Invalid Contact Number" }),
+  subject: z.string().min(3, { message: "Subject too short" }),
   message: z
     .string()
-    .min(5, { message: "Message must be at least 5 characters long" }),
+    .min(5, { message: "Message too short, please elaborate." }),
 });
 
 const ContactForm = () => {

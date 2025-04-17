@@ -15,11 +15,11 @@ const Header = () => {
             <img src="/newwwicon.png" alt="Drepto Biomedical Devices®" />
           </a>
           <div className="nav-links">
-            <a href="#overview">Overview</a>
-            <a href="#features">Features</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#about-us">About us</a>
-            <a href="#faq">FAQ</a>
+            <a href="overview">Overview</a>
+            <a href="features">Features</a>
+            <a href="how-it-works">How It Works</a>
+            <a href="about-us">About us</a>
+            <a href="faq">FAQ</a>
           </div>
           <a
             id="contact-btn"
@@ -30,7 +30,7 @@ const Header = () => {
               backgroundColor: "var(--primary-color)",
               color: "white",
             }}
-            href="#contact"
+            href="contact"
           >
             Contact Us
           </a>
