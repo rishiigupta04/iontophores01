@@ -1,12 +1,16 @@
 import React from "react";
 import { Linkedin } from "lucide-react";
+import ImageSlider from "./ImageSlider";
 
 const AboutUs = () => {
   return (
     <section id="about-us" className="section about-us">
       <div className="container">
-        <h2 className="section-heading">About Company and CEO</h2>
-        <div className="about-content">
+        <h2 className="section-heading" style={{ fontSize: "28px" }}>
+          About Company and CEO
+        </h2>
+        <ImageSlider />
+        {/* <div className="about-content">
           <div className="about-image">
             <img
               src="award.jpg"
@@ -42,8 +46,8 @@ const AboutUs = () => {
                 innovation.
               </p>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div>*/}
         <div id="testimonials" className="testimonials">
           <div className="container" id="team-links">
             <h2 className="section-title">Our Team</h2>
