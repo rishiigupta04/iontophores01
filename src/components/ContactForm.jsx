@@ -35,6 +35,7 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({});
   const [statusMessage, setStatusMessage] = useState(null); // State for status message
+  const [isLoading, setIsLoading] = useState(false); // State for loading indicator
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,11 +44,9 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate form data with Zod
     const validationResult = contactFormSchema.safeParse(formData);
 
     if (!validationResult.success) {
-      // Set validation errors
       const fieldErrors = validationResult.error.format();
       setErrors({
         name: fieldErrors.name?._errors[0],
@@ -56,15 +55,28 @@ const ContactForm = () => {
         subject: fieldErrors.subject?._errors[0],
         message: fieldErrors.message?._errors[0],
       });
-      setStatusMessage(null); // Reset status message
+      setStatusMessage(null);
       return;
     }
 
+    setIsLoading(true); // Start loading
+    setStatusMessage(null); // Clear previous status messages
+    setErrors({}); // Clear previous errors
+
     try {
-      // Handle form submission (you can implement your own submission logic here)
-      console.log("Form submitted:", formData);
-      setStatusMessage("Message sent successfully!"); // Set success message
-      // Reset form after successful submission
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbx8FDhsKagKKHWHzkKd8ddDD-XPJ5fsdw8P9r_2mBfh-B53EEf_uqRKuYweRVYwmNEd/exec",
+        {
+          method: "POST",
+          mode: "no-cors", // prevent CORS errors
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      setStatusMessage("Message sent successfully!");
       setFormData({
         name: "",
         email: "",
@@ -74,8 +86,10 @@ const ContactForm = () => {
       });
       setErrors({});
     } catch (err) {
-      setStatusMessage("An error occurred. Please try again."); // Set failure message for unexpected errors
       console.error("Submission error:", err);
+      setStatusMessage("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false); // Stop loading regardless of outcome
     }
   };
 
@@ -165,8 +179,8 @@ const ContactForm = () => {
                 <p style={{ color: "red" }}>{errors.message}</p>
               )}
             </div>
-            <button type="submit" onClick={handleSubmit}>
-              Send Message
+            <button type="submit" onClick={handleSubmit} disabled={isLoading}>
+              {isLoading ? "Sending..." : "Send Message"}
             </button>
           </form>
 
