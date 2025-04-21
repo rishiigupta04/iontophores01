@@ -7,7 +7,7 @@ const AboutUs = () => {
     <section id="about-us" className="section about-us">
       <div className="container">
         <h2 className="section-heading" style={{ fontSize: "28px" }}>
-          About Company and CEO
+          GALLERY
         </h2>
         <ImageSlider />
         {/* <div className="about-content">

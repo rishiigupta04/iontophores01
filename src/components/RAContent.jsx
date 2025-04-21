@@ -13,6 +13,7 @@ const RAContent = () => {
           own tissues, particularly the synovium - the lining of the membranes
           surrounding the joints.
         </p>
+
         <p>RA is characterized by:</p>
         <ul>
           <li>

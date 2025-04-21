@@ -4,7 +4,6 @@ import { z } from "zod";
 // Zod schema for form validation
 const contactFormSchema = z.object({
   name: z.string({ message: "Name is not valid" }),
-
   email: z.string().email({ message: "Invalid email address" }),
   number: z.string().regex(/^\d{10}$/, { message: "Invalid Contact Number" }),
   subject: z.string().min(3, { message: "Subject too short" }),

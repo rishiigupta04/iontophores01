@@ -7,7 +7,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const ImageSlider = () => {
-  const images = ["/img1.jpg", "/img2.jpeg", "/img3.jpeg", "/img4.jpeg"];
+  const images = [
+    "/img1.jpg",
+    "/img2.jpeg",
+    "/img3.jpeg",
+    "/img4.jpeg",
+    "/img5.jpg",
+  ];
   const [lightboxImg, setLightboxImg] = useState(null);
 
   const openLightbox = (src) => setLightboxImg(src);

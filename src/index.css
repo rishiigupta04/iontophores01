@@ -1187,7 +1187,7 @@ button:hover {
   padding: 20px;
   overflow: hidden;
   margin-block: 50px;
-  gap: 20px;
+  gap: 0px;
 
   img {
     border-radius: 20px;
@@ -1205,7 +1205,7 @@ button:hover {
     margin-block: 20px;
 
     img {
-      border-radius: 90px;
+      border-radius: 0px;
     }
   }
 }
@@ -1219,7 +1219,7 @@ button:hover {
     margin-block: 20px;
 
     img {
-      border-radius: 90px;
+      border-radius: 0px;
     }
   }
 }

@@ -44,19 +44,28 @@ const Overview = () => {
         care.
       </p>
       <div className="image-container">
-        <img
-          src="/3.jpg"
-          alt="Drepto Biomedical Devices® research team"
-          width="500"
-          height="400"
-        />
-        <img
-          src="ra2.jpg"
-          alt="rheumatoid arthritis"
-          width="500"
-          height="300"
-        />
-        <img src="/R.jpg" alt="rheumatoid arthritis" width="500" height="400" />
+        <div className="image-left">
+          <img
+            src="/ra3.webp"
+            alt="Drepto Biomedical Devices® research team"
+            width="500"
+            height="400"
+          />
+          <img
+            src="ra2.jpg"
+            alt="rheumatoid arthritis"
+            width="500"
+            height="300"
+          />
+        </div>
+        <div className="image-right">
+          <img
+            src="/ra4.jpg"
+            alt="rheumatoid arthritis"
+            width="500"
+            height="500"
+          />
+        </div>
       </div>
     </section>
   );
