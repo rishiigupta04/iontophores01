@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,27 +16,27 @@ const ImageSlider = () => {
   ];
   const [lightboxImg, setLightboxImg] = useState(null);
 
-  const openLightbox = (src) => setLightboxImg(src);
-  const closeLightbox = () => setLightboxImg(null);
-
   return (
     <div
       id="myGallery"
       style={{ maxWidth: "1000px", margin: "0 auto", padding: "0px" }}
     >
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]} // ① add Autoplay
         spaceBetween={20}
         loop={true}
         navigation
         pagination={{ clickable: true }}
+        autoplay={{
+          // ② autoplay config
+          delay: 0, // start next frame immediately
+          disableOnInteraction: false, // keep going after drag/swipe
+          pauseOnMouseEnter: false, // keep going on hover (optional)
+        }}
+        speed={5000} // ③ slide travel time (4 s per slide)
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
         }}
         className="custom-swiper"
         style={{ width: "100%" }}
@@ -53,7 +53,7 @@ const ImageSlider = () => {
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              onClick={() => openLightbox(src)}
+              onClick={() => setLightboxImg(src)}
               style={{
                 width: "70%",
                 maxHeight: "70vh",
@@ -68,17 +68,14 @@ const ImageSlider = () => {
         ))}
       </Swiper>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox */}
       {lightboxImg && (
         <div
-          onClick={closeLightbox}
+          onClick={() => setLightboxImg(null)}
           style={{
             position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            inset: 0,
+            backgroundColor: "rgba(0,0,0,.8)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -92,11 +89,11 @@ const ImageSlider = () => {
               maxWidth: "90%",
               maxHeight: "90%",
               borderRadius: "12px",
-              boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
+              boxShadow: "0 0 20px rgba(0,0,0,.5)",
             }}
           />
           <button
-            onClick={closeLightbox}
+            onClick={() => setLightboxImg(null)}
             style={{
               position: "absolute",
               top: "20px",
@@ -113,23 +110,19 @@ const ImageSlider = () => {
         </div>
       )}
 
-      {/* Swiper styling override */}
+      {/* Swiper styles */}
       <style>{`
         .custom-swiper .swiper-button-next,
         .custom-swiper .swiper-button-prev {
           color: #00857c;
         }
-
         .custom-swiper .swiper-pagination-bullet {
           background: #00857c;
-          opacity: 0.5; 
+          opacity: 0.5;
         }
-
         .custom-swiper .swiper-pagination-bullet-active {
-          background: #00857c;
           opacity: 1;
         }
-          
       `}</style>
     </div>
   );
