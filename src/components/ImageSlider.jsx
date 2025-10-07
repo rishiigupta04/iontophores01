@@ -10,9 +10,17 @@ const ImageSlider = () => {
   const images = [
     "/img1.jpg",
     "/img2.jpeg",
-    "/img3.jpeg",
+      "/01.jpg",
+    "/02.jpg",
+       "/05.jpg",
+        "/04.jpg",
+    "/03.jpg",
+    "/06.jpg",
     "/img4.jpeg",
     "/img5.jpg",
+
+
+
   ];
   const [lightboxImg, setLightboxImg] = useState(null);
 
