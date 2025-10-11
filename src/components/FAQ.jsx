@@ -26,8 +26,45 @@ const FAQItem = ({ question, answer }) => {
 
 const FAQ = () => {
   const faqs = [
+    // Menstrual Patch Questions
     {
-      question: "How often do I need to change the patch?",
+      question: "How long does the menstrual patch provide relief?",
+      answer:
+        "Our menstrual patch is designed to provide continuous relief for up to 12 hours, allowing you to go about your day with minimal discomfort.",
+    },
+    {
+      question: "Is the menstrual patch discreet to wear?",
+      answer:
+        "Yes, the patch is thin, flexible, and designed to be discreet. It adheres comfortably to your skin, so you can wear it under your clothes without it being noticeable.",
+    },
+    {
+      question: "What is the patch made of?",
+      answer:
+        "The menstrual patch is made with a blend of natural, herbal ingredients that are known for their pain-relieving and soothing properties. It is 100% herbal and free from harsh chemicals.",
+    },
+    {
+      question: "Can I exercise with the patch on?",
+      answer:
+        "Yes, the patch is designed to stay in place during physical activity. Its adhesive is strong enough to withstand light to moderate exercise.",
+    },
+    {
+      question: "Can I shower or bathe with the menstrual patch on?",
+      answer:
+        "The patch is water-resistant, making it safe to wear in the shower. However, we recommend avoiding prolonged submersion in water, such as in a bath or while swimming, to ensure the patch remains effective.",
+    },
+    {
+      question: "Are there any side effects from using the menstrual patch?",
+      answer:
+        "The patch uses natural ingredients, so side effects are rare. Some individuals with sensitive skin may experience mild irritation at the application site. If this occurs, remove the patch and consult a healthcare professional.",
+    },
+    {
+      question: "What are the warnings for using the menstrual patch?",
+      answer:
+        "Do not use if you are allergic to any of the ingredients. Do not apply on eyes, mouth, genitals, or other mucous membranes. Avoid using on wounds or damaged skin or infected skin. Do not apply with a heating pad. If abnormal irritation occurs, stop using the patch and consult your healthcare provider.",
+    },
+    // Rheumatoid Arthritis Patch Questions
+    {
+      question: "How often do I need to change the RA patch?",
       answer:
         "The patch is designed to be changed every 24 hours, providing consistent medication delivery throughout the day.",
     },
@@ -37,39 +74,26 @@ const FAQ = () => {
         "No, the patch is completely painless. You may feel a slight tingling sensation when it's active, but this is normal and not uncomfortable.",
     },
     {
-      question: "Can I shower or swim with the patch on?",
+      question: "Can the patch be used with other RA medications?",
       answer:
-        "The patch is water-resistant, allowing you to shower. However, prolonged immersion in water, such as swimming, is not recommended.",
+        "Yes, the iontophoretic patch can be used alongside other rheumatoid arthritis medications. However, it is important to consult with your healthcare provider to ensure the combination of treatments is safe and effective.",
     },
     {
-      question: "Are there any side effects?",
+      question: "How does iontophoretic drug delivery work for RA?",
       answer:
-        "Side effects are minimal compared to oral medications. Some users may experience mild skin irritation at the application site, which usually resolves quickly.",
+        "Iontophoretic drug delivery uses a mild electrical current to deliver medication through the skin directly to the affected joints. The electrical current helps enhance the absorption of the drug, ensuring targeted relief from inflammation and pain.",
     },
     {
-      question:
-        "How does iontophoretic drug delivery work for rheumatoid arthritis?",
+      question: "What if I experience irritation at the application site?",
       answer:
-        "Iontophoretic drug delivery uses a mild electrical current to deliver medication through the skin directly to the affected joints. The electrical current helps enhance the absorption of the drug, ensuring that it reaches deeper tissues where it can provide targeted relief from inflammation and pain associated with rheumatoid arthritis.",
+        "If you experience irritation, remove the patch immediately and rinse the area. Consult your healthcare provider before reapplying the patch. They may recommend an alternative.",
     },
     {
-      question:
-        "Can the patch be used in conjunction with other rheumatoid arthritis medications?",
+      question: "Are there any contraindications for using the RA patch?",
       answer:
-        "Yes, the iontophoretic patch can be used alongside other rheumatoid arthritis medications. However, it is important to consult with your healthcare provider to ensure that the combination of treatments is safe and effective for your specific condition.",
+        "Yes, there are certain contraindications, such as open wounds or sores at the application site. Always inform your healthcare provider of any medical conditions before using the patch.",
     },
-    {
-      question:
-        "What should I do if I experience irritation or discomfort at the application site?",
-      answer:
-        "If you experience irritation or discomfort, remove the patch immediately and rinse the area with cool water. Consult your healthcare provider before reapplying the patch. They may adjust the treatment or recommend an alternative medication or method.",
-    },
-    {
-      question:
-        "Are there any contraindications for using the iontophoretic patch?",
-      answer:
-        "Yes, there are certain contraindications, such as open wounds or sores at the application site or certain skin conditions. Always inform your healthcare provider of any medical conditions before using the patch.",
-    },
+
   ];
 
   return (

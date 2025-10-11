@@ -1,0 +1,443 @@
+/* =============================
+   ✅ Scroll Fade-Up Animation
+   ============================= */
+
+/* Create a scroll timeline for the document */
+@scroll-timeline fadeTimeline {
+  source: auto;
+  orientation: block;
+  scroll-offsets: (enter 80%) (exit 20%);
+}
+
+/* Elements that should fade-up as they scroll into view */
+.scroll-fade-up {
+  opacity: 1; /* Default to visible */
+  transform: translateY(0);
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation-name: fadeUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timeline: fadeTimeline;
+    animation-range: entry 0% exit 30%;
+  }
+}
+
+/* Keyframes for fade-up effect */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-details {
+  animation: fadeIn 0.6s ease;
+}
+
+/* ---------- Hero Section ---------- */
+.product-hero {
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f4 100%);
+  padding: 6rem 1rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  gap: 3rem;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #008575;
+  margin-bottom: 1rem;
+}
+
+.hero-text .lead {
+  font-size: 1.15rem;
+  color: #06413b;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.hero-image-container {
+  flex: 1;
+  position: relative;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.hero-image {
+  width: 85%;
+  max-width: 400px;
+  transform: rotateY(10deg) rotateX(4deg);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 133, 117, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-image:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.03);
+  box-shadow: 0 25px 60px rgba(0, 133, 117, 0.35);
+}
+
+.image-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(0, 201, 177, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(40px);
+}
+
+/* ---------- Overview ---------- */
+.product-overview {
+  max-width: 900px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.product-overview h2 {
+  color: #008575;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- About Section (modern insights) ---------- */
+.product-overview {
+  background: #ffffff;
+  padding: 5rem 1rem;
+}
+
+.overview-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-text h2 {
+  color: #008575;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.overview-tagline {
+  font-size: 1.1rem;
+  color: #06413b;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.overview-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f4 100%);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 133, 117, 0.08);
+  padding: 2rem 1.5rem;
+  width: 280px;
+  border: 1px solid rgba(0, 133, 117, 0.08);
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 133, 117, 0.15);
+}
+
+.highlight-icon {
+  font-size: 1.8rem;
+  color: #00a693;
+  margin-bottom: 0.8rem;
+}
+
+.highlight-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #06413b;
+  margin-bottom: 0.4rem;
+}
+
+.highlight-card p {
+  color: #5a7a77;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.overview-summary {
+  color: #06413b;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Fade-up animation reuse */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+
+.product-overview p {
+  color: #5a7a77;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Benefits (2x2 layout with fade-up) ---------- */
+.product-benefits {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fffe 100%);
+  padding: 5rem 1rem;
+}
+
+.product-benefits h2 {
+  text-align: center;
+  color: #008575;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: linear-gradient(135deg, #f0fffe 0%, #e0f7f5 100%);
+  border-radius: 18px;
+  padding: 2.5rem 1.8rem;
+  box-shadow: 0 8px 24px rgba(0, 133, 117, 0.08);
+  border: 1px solid rgba(0, 133, 117, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.benefit-card.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 133, 117, 0.18);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  color: #00a693;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #06413b;
+  margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+  color: #5a7a77;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- How to Use (enhanced design) ---------- */
+.product-instructions {
+  background: #ffffff;
+  padding: 5rem 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-instructions h2 {
+  color: #008575;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  flex: 1 1 280px;
+  background: #f8fffe;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 133, 117, 0.08);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 133, 117, 0.08);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.step.fade-up {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 133, 117, 0.15);
+}
+
+.step-icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #008575, #00a693);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0, 133, 117, 0.2);
+  z-index: 1;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(0, 133, 117, 0.3);
+  border-radius: 50%;
+  animation: pulse 1.8s infinite ease-out;
+  z-index: 0;
+}
+
+.step p {
+  color: #5a7a77;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 250px;
+}
+
+/* ---------- Animations ---------- */
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text .lead {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    width: 90%;
+    transform: none;
+    box-shadow: 0 10px 20px rgba(0, 133, 117, 0.15);
+  }
+
+  .hero-image:hover {
+    transform: none;
+    box-shadow: 0 10px 20px rgba(0, 133, 117, 0.15);
+  }
+
+  /* Overview & Benefits Sections */
+  .product-overview h2,
+  .product-benefits h2,
+  .product-instructions h2 {
+    font-size: 1.8rem;
+  }
+
+  .overview-highlights,
+  .benefits-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-card,
+  .benefit-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* How to Use Section */
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* CTA Section */
+  .product-cta h2 {
+    font-size: 1.8rem;
+  }
+}

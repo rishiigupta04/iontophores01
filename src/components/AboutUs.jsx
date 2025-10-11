@@ -116,7 +116,7 @@ const AboutUs = () => {
                 </p>
                 <p>
                   Technical Advisor <br />
-                  Alumnus, IIT Bombay
+                  Alumni, IIT Bombay
                 </p>
               </div>
             </div>

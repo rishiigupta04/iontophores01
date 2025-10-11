@@ -1,18 +1,22 @@
 import React from "react";
-import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
+  const scrollToProducts = (e) => {
+    e.preventDefault();
+    const el = document.getElementById("product-portfolio");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // fallback: update the hash so navigation still works
+      window.location.hash = "#product-portfolio";
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section logo-section">
           <img width={300} src="/newwwicon.png" alt=" company logo" />
-          {/* <div className="social-icons">
-            <Facebook size={20} />
-            <Twitter size={20} />
-            <Linkedin size={20} />
-            <Youtube size={20} />
-          </div> */}
         </div>
 
         <div className="footer-section address-section">
@@ -24,10 +28,9 @@ const Footer = () => {
         <div className="footer-section links-section">
           <ul className="footer-links">
             <li>
-              <a href="#overview">Overview</a>
-            </li>
-            <li>
-              <a href="#features">Features</a>
+              <a href="#product-portfolio" onClick={scrollToProducts}>
+                Our Products
+              </a>
             </li>
             <li>
               <a href="#about-us">About us</a>

@@ -10,13 +10,13 @@ const Hero = () => {
         </video>
       </div>
       <div className="hero-content container">
-        <h1>Revolutionary Iontophoretic Patch for Rheumatoid Arthritis</h1>
-        {/* <p>
-          Experience the future of RA treatment with our innovative,
-          non-invasive drug delivery system.
-        </p> */}
-        <a href="#stats-table" className="cta-button">
-          Discover More
+        <h1>Innovative Biomedical Solutions for Better Healthcare</h1>
+        <p>
+          Pioneering non-invasive drug delivery systems for rheumatoid arthritis
+          and women's health
+        </p>
+        <a href="#product-portfolio" className="cta-button">
+          Explore Our Products
         </a>
       </div>
     </section>

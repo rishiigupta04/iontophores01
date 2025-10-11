@@ -1,0 +1,249 @@
+/* Header styles extracted from index.css and cleaned up for plain CSS */
+:root {
+  /* keep variable fallbacks local if needed */
+}
+header {
+  background: rgba(255, 255, 255, 0.98);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 133, 124, 0.12);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  height: 64px;
+}
+
+.nav-wrapper a img {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--primary-color);
+}
+
+/* Dropdown - supports hover (desktop) and the .open class toggled by React */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  /* overlap the trigger by a few pixels so there's no invisible hover gap when moving the mouse */
+  top: calc(100% - 4px);
+  left: 0;
+  min-width: 200px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  padding: 8px 0;
+  display: none;
+  z-index: 2000; /* higher to avoid being covered */
+}
+
+/* add a subtle separator so the menu doesn't visually stick to the link but still keeps no hover gap */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  right: 12px;
+  height: 6px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.02), rgba(0,0,0,0));
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background: var(--light-gray);
+  color: var(--primary-color);
+}
+
+/* show on hover for desktop */
+.dropdown:hover .dropdown-menu,
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* Contact button kept inline but styled here */
+#contact-btn {
+  padding-block: 8px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hamburger */
+.hamburger-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-btn .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: var(--text-color);
+  transition: all 0.25s ease-in-out;
+}
+
+.hamburger-btn.open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Sidebar (mobile) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+.sidebar.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: white;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.sidebar-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 8px;
+  background: var(--primary-color);
+}
+
+.sidebar-nav a:hover {
+  background: var(--secondary-color);
+}
+
+.dropdown-mobile > a {
+  color: white;
+  background: transparent;
+  padding: 12px 16px;
+  display: inline-block;
+}
+
+.dropdown-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dropdown-menu-mobile a {
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  #contact-btn {
+    display: none;
+  }
+  .hamburger-btn {
+    display: block;
+  }
+  .hamburger-btn .bar {
+    background-color: var(--primary-color);
+  }
+  /* make sidebar nav items visible and spaced */
+  .sidebar-nav a {
+    color: white;
+  }
+}
+
+/* Small tweak for very small screens */
+@media (max-width: 420px) {
+  .nav-wrapper img {
+    height: 50px;
+  }
+}
