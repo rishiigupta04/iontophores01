@@ -215,9 +215,7 @@ const ContactForm = () => {
           <hr />
           <div style={{ paddingTop: "5px" }}>
             <h2>Connect With Us</h2>
-            <p>
-              <FaPhone /> <strong>Phone:</strong> 022 25764761
-            </p>
+            
             <p style={{ marginTop: "10px" }}>
               <FaEnvelope /> <strong>Email:</strong>{" "}
               rahulkgupta@dreptobiodevices.com
