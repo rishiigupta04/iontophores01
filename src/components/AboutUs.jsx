@@ -119,6 +119,51 @@ const AboutUs = () => {
                   Alumni, IIT Bombay
                 </p>
               </div>
+                 <div className="testimonial">
+                <img
+                  src="/rupesh_gupta.webp"
+                  alt=""
+                  className="team-member-image"
+                />
+                <h3>Rupesh Kumar Gupta</h3>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/company/dycine-pharmaceuticals-ltd/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="linkedin-link"
+                  >
+                    <Linkedin size={20} /> LinkedIn
+                  </a>
+                </p>
+                <p>
+                  Business Head <br />
+                  <span>Director at<br></br> DyCine Pharmaceuticals Ltd.</span>
+                </p>
+              </div>
+                  <div className="testimonial">
+                <img
+                  src="/dr_chandan.jpg"
+                  alt=""
+                  className="team-member-image"
+                />
+                <h3>Dr. Chandan Yadav</h3>
+                <p>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="linkedin-link"
+                  >
+                    <Linkedin size={20} /> LinkedIn
+                  </a>
+                </p>
+                <p>
+                   Chief Medical Officer
+ <br />
+                  <span>Senior Radiologist<br></br> Medanta Hospital</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -218,7 +218,7 @@ const ContactForm = () => {
             
             <p style={{ marginTop: "10px" }}>
               <FaEnvelope /> <strong>Email:</strong>{" "}
-              rahulkgupta@dreptobiodevices.com
+              office@dreptobiodevices.com
             </p>
             <p style={{ marginTop: "10px" }}>
               <strong>Working Hours:</strong> Monday - Friday, 9am - 5pm IST
